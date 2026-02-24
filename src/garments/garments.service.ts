@@ -14,6 +14,7 @@ export class GarmentsService {
     private readonly usersService: UsersService,
   ) {}
 
+  // metodos
   async create(createGarmentDto: CreateGarmentDto): Promise<Garment> {
     const user = await this.usersService.findOne(
       createGarmentDto.userId as number,
